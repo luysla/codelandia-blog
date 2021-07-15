@@ -18,7 +18,10 @@
     --blue: #3EA1DB;
     --blue-dark: #574AE8;
     --white: #FFF;
-  
+
+    --background: #F3F5F7;
+    --background-input: rgba(255, 255, 255, 0.2);
+
     --title: #313131;
     --text: #B6B6B6;
     
@@ -38,10 +41,16 @@
     color: var(--white);
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.title, .search {
+    padding: 20px;
+}
+
 .header {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 250px;
     background: var(--linear);
@@ -51,33 +60,95 @@
     align-items: center;
 }
 
-.header__content {
-    display: flex;
-    justify-content: space-between;
+.content {
     width: 100%;
     max-width: 900px;
-    margin: 20px;
 }
 
-.header__title {
+.title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title__text {
     font-family: 'Lexend Deca';
-    font-size: 24px;
+    font-size: 22px;
     line-height: 30px;
     color: var(--white);
 }
 
-.header__search {
+.search i {
+    position: absolute;
+}
+
+.search__icon {
+    padding: 11px;
+    width: 70px;
+    text-align: left;
+    color: var(--white);
+}
+
+.search__input {
     font-family: 'Inter Regular';
     color: var(--white);
-    background: rgba(255, 255, 255, 0.2);
+    background: var(--background-input);
     width: 100%;
-    height: 35px;
+    height: 40px;
     max-width: 900px;
     border: none;
     border-radius: 5px;
+    text-align: center;
 }
 
-.header__search:focus {
+.search__input:focus {
     outline: none;
 }
 
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background);
+    height: 100vh;
+    padding: 20px;
+}
+
+.card {
+    width: 100%;
+    max-width: 850px;
+    background-color: var(--white);
+    margin: 20px;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.card__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.card__date {
+    font-family: 'Lexend Deca';
+    color: var(--text);
+    font-size: 13px;
+}
+
+.card__icon {
+    color: var(--blue-dark);
+}
+
+.card__title {
+    font-family: 'Lexend Deca';
+    color: var(--title);
+    font-size: 26px;
+    line-height: 50px;
+}
+
+.card__description {
+    font-family: 'Lexend Deca';
+    color: var(--text);
+    font-size: 15px;
+    line-height: 30px;
+}
