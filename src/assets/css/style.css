@@ -44,6 +44,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 .title, .search {
@@ -115,10 +116,11 @@
 
 .card {
     width: 100%;
+    height: auto;
     max-width: 850px;
     background-color: var(--white);
-    margin: 20px;
-    padding: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
     border-radius: 2px;
 }
 
